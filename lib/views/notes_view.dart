@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/add_note_button_sheet.dart';
 import 'widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
@@ -11,7 +12,13 @@ class NotesView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         backgroundColor: Colors.blueAccent[200],
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const AddNoteButtonSheet();
+              });
+        },
         child: const Icon(
           Icons.add,
         ),
