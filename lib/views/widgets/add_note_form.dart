@@ -51,7 +51,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
-              DateTime now = DateTime.now();
+            
               return CustomButton(
                 isLoading: state is AddNoteLoading ? true : false,
                 onTap: () {
